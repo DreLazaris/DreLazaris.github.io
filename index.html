@@ -61,7 +61,7 @@
             text-decoration: none;
             font-size: 1.1rem;
         }
-        nav a:hover {
+        nav a:hover, nav a.active {
             background-color: #555;
         }
         .container {
@@ -114,6 +114,10 @@
             const sections = document.querySelectorAll('.content-section');
             sections.forEach(section => section.classList.remove('active'));
             document.getElementById(sectionId).classList.add('active');
+
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => link.classList.remove('active'));
+            document.querySelector(`nav a[href="javascript:void(0)"`).classList.add('active');
         }
     </script>
 </head>
@@ -127,7 +131,7 @@
         </div>
     </header>
     <nav>
-        <a href="javascript:void(0)" onclick="showSection('projects')">Projects</a>
+        <a href="javascript:void(0)" onclick="showSection('projects')" class="active">Projects</a>
         <a href="javascript:void(0)" onclick="showSection('certifications')">Certifications</a>
     </nav>
     <div class="container">
@@ -195,7 +199,4 @@
         </div>
     </div>
     <footer>
-        <p>© 2024 Andres Lazaris. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+        <p>©
