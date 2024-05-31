@@ -31,6 +31,21 @@
             font-size: 1.2rem;
             margin: 0.5rem 0 0;
         }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        nav a {
+            color: #eaeaea;
+            padding: 1rem;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
         .container {
             width: 80%;
             margin: 0 auto;
@@ -62,7 +77,7 @@
         .contact a:hover {
             color: #61dafb;
         }
-        .project {
+        .project, .certifications {
             background-color: #282c34;
             padding: 1.5rem;
             margin: 1rem 0;
@@ -70,22 +85,22 @@
             transition: transform 0.3s ease;
             border-radius: 8px;
         }
-        .project:hover {
+        .project:hover, .certifications:hover {
             transform: translateY(-5px);
         }
-        .project h2 {
+        .project h2, .certifications h2 {
             color: #eaeaea;
             margin-bottom: 10px;
         }
-        .project p {
+        .project p, .certifications p {
             color: #c7c7c7;
             font-size: 1.1em;
         }
-        .project ul {
+        .project ul, .certifications ul {
             color: #c7c7c7;
             padding-left: 20px;
         }
-        .project ul li {
+        .project ul li, .certifications ul li {
             margin-bottom: 10px;
         }
         footer {
@@ -94,72 +109,98 @@
             background-color: #282c34;
             color: #eaeaea;
         }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
     </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
 </head>
-<body>
+<body onload="showSection('projects')">
     <header>
         <h1>Andres Lazaris</h1>
         <p>Accomplished Project & Program Manager in Technology and Finance</p>
     </header>
+    <nav>
+        <a href="javascript:void(0)" onclick="showSection('projects')">Projects</a>
+        <a href="javascript:void(0)" onclick="showSection('certifications')">Certifications</a>
+    </nav>
     <div class="container">
-        <div class="profile">
-            <img src="images/selfie.png" alt="Andres Lazaris">
-            <h1>Andres Lazaris, PMP, PMI-ACP</h1>
-            <p>Andres.Lazaris@gmail.com | (703) 509-2433 | <a href="https://www.linkedin.com/in/andreslazaris">LinkedIn</a></p>
+        <div id="projects" class="content-section active">
+            <div class="profile">
+                <img src="images/selfie.png" alt="Andres Lazaris">
+                <h1>Andres Lazaris, PMP, PMI-ACP</h1>
+                <p>Andres.Lazaris@gmail.com | (703) 509-2433 | <a href="https://www.linkedin.com/in/andreslazaris">LinkedIn</a></p>
+            </div>
+            <div class="project">
+                <h2>Financial Business Operations at Twilio</h2>
+                <p><strong>Role:</strong> Project Manager, Financial Business Operations</p>
+                <p><strong>Duration:</strong> 2022 - Present</p>
+                <ul>
+                    <li>Developed a KPI framework for the PMO, aligned with OKRs, resulting in a $3.1M FY23 impact and saving 6k hours.</li>
+                    <li>Led the RFP for a payroll provider, creating a $1.5M business case for leadership approval.</li>
+                    <li>Planned and directed the Global VAT/GST Tax Collection Program, recovering $1.2M from untaxed customers.</li>
+                    <li>Implemented various financial automation processes, saving significant costs and time across multiple projects.</li>
+                    <li>Managed cross-functional teams, ensuring timely project delivery and alignment with business goals.</li>
+                    <li>Utilized Agile methodologies to streamline processes and improve efficiency.</li>
+                </ul>
+            </div>
+            <div class="project">
+                <h2>Internal Consulting at Georgetown University</h2>
+                <p><strong>Role:</strong> Senior Internal Consultant</p>
+                <p><strong>Duration:</strong> 2020 - 2022</p>
+                <ul>
+                    <li>Orchestrated the reorganization of the main campus finance department, aligning processes with a new strategy and partnering with the Main Campus CFO for effective change management.</li>
+                    <li>Implemented an AI-powered expense report auditing tool.</li>
+                    <li>Created a business case for a new talent acquisition team, leading to a reduction in recruiting expenses by an estimated 23% over 3 years.</li>
+                    <li>Developed a 5-year campus operations plan with nine key recommendations.</li>
+                    <li>Led strategic initiatives to enhance financial transparency and accountability.</li>
+                    <li>Collaborated with stakeholders to identify and implement process improvements.</li>
+                </ul>
+            </div>
+            <div class="project">
+                <h2>Consulting at MorganFranklin</h2>
+                <p><strong>Role:</strong> Senior Consultant</p>
+                <p><strong>Duration:</strong> 2019 - 2020</p>
+                <ul>
+                    <li>Supported the business process reorganization for a national company in preparation for a new ERP tool implementation.</li>
+                    <li>Documented requirements and organizational design for a new EPM consolidation tool, enhancing client operations.</li>
+                    <li>Provided expert analysis and recommendations for process optimization.</li>
+                    <li>Facilitated workshops and training sessions to ensure successful implementation.</li>
+                    <li>Developed and maintained strong client relationships, ensuring satisfaction and repeat business.</li>
+                </ul>
+            </div>
+            <div class="project">
+                <h2>Portfolio Implementation Operations at Sands Capital Management</h2>
+                <p><strong>Role:</strong> Senior Associate</p>
+                <p><strong>Duration:</strong> 2015 - 2019</p>
+                <ul>
+                    <li>Integrated four new strategies and products in 2018.</li>
+                    <li>Integrated three new complex, multi-asset investment products in 2019, contributing to the firm's growth and investment diversification.</li>
+                    <li>Led initiatives to enhance trading efficiency and reduce operational risk.</li>
+                    <li>Collaborated with portfolio managers to develop and implement trading strategies.</li>
+                    <li>Monitored market trends and provided insights to support investment decisions.</li>
+                </ul>
+            </div>
         </div>
-        <div class="project">
-            <h2>Financial Business Operations at Twilio</h2>
-            <p><strong>Role:</strong> Project Manager, Financial Business Operations</p>
-            <p><strong>Duration:</strong> 2022 - Present</p>
-            <ul>
-                <li>Developed a KPI framework for the PMO, aligned with OKRs, resulting in a $3.1M FY23 impact and saving 6k hours.</li>
-                <li>Led the RFP for a payroll provider, creating a $1.5M business case for leadership approval.</li>
-                <li>Planned and directed the Global VAT/GST Tax Collection Program, recovering $1.2M from untaxed customers.</li>
-                <li>Implemented various financial automation processes, saving significant costs and time across multiple projects.</li>
-                <li>Managed cross-functional teams, ensuring timely project delivery and alignment with business goals.</li>
-                <li>Utilized Agile methodologies to streamline processes and improve efficiency.</li>
-            </ul>
-        </div>
-        <div class="project">
-            <h2>Internal Consulting at Georgetown University</h2>
-            <p><strong>Role:</strong> Senior Internal Consultant</p>
-            <p><strong>Duration:</strong> 2020 - 2022</p>
-            <ul>
-                <li>Orchestrated the reorganization of the main campus finance department, aligning processes with a new strategy and partnering with the Main Campus CFO for effective change management.</li>
-                <li>Implemented an AI-powered expense report auditing tool.</li>
-                <li>Created a business case for a new talent acquisition team, leading to a reduction in recruiting expenses by an estimated 23% over 3 years.</li>
-                <li>Developed a 5-year campus operations plan with nine key recommendations.</li>
-                <li>Led strategic initiatives to enhance financial transparency and accountability.</li>
-                <li>Collaborated with stakeholders to identify and implement process improvements.</li>
-            </ul>
-        </div>
-        <div class="project">
-            <h2>Consulting at MorganFranklin</h2>
-            <p><strong>Role:</strong> Senior Consultant</p>
-            <p><strong>Duration:</strong> 2019 - 2020</p>
-            <ul>
-                <li>Supported the business process reorganization for a national company in preparation for a new ERP tool implementation.</li>
-                <li>Documented requirements and organizational design for a new EPM consolidation tool, enhancing client operations.</li>
-                <li>Provided expert analysis and recommendations for process optimization.</li>
-                <li>Facilitated workshops and training sessions to ensure successful implementation.</li>
-                <li>Developed and maintained strong client relationships, ensuring satisfaction and repeat business.</li>
-            </ul>
-        </div>
-        <div class="project">
-            <h2>Trading Operations at Sands Capital Management</h2>
-            <p><strong>Role:</strong> Senior Associate</p>
-            <p><strong>Duration:</strong> 2015 - 2019</p>
-            <ul>
-                <li>Integrated four new strategies and products in 2018.</li>
-                <li>Integrated three new complex, multi-asset investment products in 2019, contributing to the firm's growth and investment diversification.</li>
-                <li>Led initiatives to enhance trading efficiency and reduce operational risk.</li>
-                <li>Collaborated with portfolio managers to develop and implement trading strategies.</li>
-                <li>Monitored market trends and provided insights to support investment decisions.</li>
-            </ul>
+        <div id="certifications" class="content-section">
+            <div class="certifications">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Project Management Professional (PMP)</li>
+                    <li>Agile Certified Practitioner (PMI-ACP)</li>
+                    <li>PMI Organizational Transformation</li>
+                </ul>
+            </div>
         </div>
     </div>
     <footer>
-        <p>© 2024 Andres Lazaris. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+        <p>© 2024 Andres Lazaris. All
