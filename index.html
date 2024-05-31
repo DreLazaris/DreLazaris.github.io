@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andres Lazaris - Project Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -19,6 +20,7 @@
             color: #fff;
             padding: 1rem 0;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         .container {
             width: 80%;
@@ -33,7 +35,8 @@
         .profile img {
             border-radius: 50%;
             width: 150px;
-            height: auto; /* Maintain aspect ratio */
+            height: auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         .profile h1 {
             margin: 10px 0;
@@ -44,22 +47,39 @@
         }
         .contact p {
             margin: 5px 0;
+            font-size: 1.1em;
+        }
+        .contact a {
+            color: #333;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            color: #007BFF;
         }
         .project {
             background-color: #fff;
-            padding: 1rem;
+            padding: 1.5rem;
             margin: 1rem 0;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .project:hover {
+            transform: translateY(-5px);
         }
         .project h2 {
             color: #333;
+            margin-bottom: 10px;
         }
         .project p {
             color: #666;
+            font-size: 1.1em;
         }
         .project ul {
             color: #666;
             padding-left: 20px;
+        }
+        .project ul li {
+            margin-bottom: 10px;
         }
         footer {
             text-align: center;
