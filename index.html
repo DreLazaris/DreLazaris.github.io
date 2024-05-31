@@ -117,7 +117,7 @@
 
             const navLinks = document.querySelectorAll('nav a');
             navLinks.forEach(link => link.classList.remove('active'));
-            document.querySelector(`nav a[href="javascript:void(0)"`).classList.add('active');
+            document.querySelector(`nav a[href="javascript:void(0)" onclick="showSection('${sectionId}')"]`).classList.add('active');
         }
     </script>
 </head>
@@ -132,7 +132,7 @@
     </header>
     <nav>
         <a href="javascript:void(0)" onclick="showSection('projects')" class="active">Projects</a>
-        <a href="javascript:void(0)" onclick="showSection('certifications')" id="certificationsLink">Certifications</a>
+        <a href="javascript:void(0)" onclick="showSection('certifications')">Certifications</a>
     </nav>
     <div class="container">
         <div id="projects" class="content-section active">
@@ -195,7 +195,7 @@
                     <li>Agile Certified Practitioner (PMI-ACP)</li>
                     <li>PMI Organizational Transformation</li>
                 </ul>
-            </div>
+            </div
         </div
     </div>
     <footer>
