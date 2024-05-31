@@ -22,6 +22,9 @@
             padding: 2rem 0;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         header h1 {
             margin: 0;
@@ -29,7 +32,22 @@
         }
         header p {
             font-size: 1.2rem;
-            margin: 0.5rem 0 0;
+            margin: 0.5rem 0;
+        }
+        .contact-info {
+            margin-top: 1rem;
+            text-align: center;
+        }
+        .contact-info img {
+            border-radius: 50%;
+            width: 100px;
+            height: auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1rem;
+        }
+        .contact-info p {
+            margin: 0.2rem 0;
+            font-size: 1.1em;
         }
         nav {
             display: flex;
@@ -51,31 +69,6 @@
             margin: 0 auto;
             padding: 20px;
             flex: 1;
-        }
-        .profile {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .profile img {
-            border-radius: 50%;
-            width: 150px;
-            height: auto;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-        }
-        .profile h1 {
-            margin: 10px 0;
-            color: #eaeaea;
-        }
-        .contact p {
-            margin: 5px 0;
-            font-size: 1.1em;
-        }
-        .contact a {
-            color: #eaeaea;
-            text-decoration: none;
-        }
-        .contact a:hover {
-            color: #61dafb;
         }
         .project, .certifications {
             background-color: #282c34;
@@ -126,8 +119,12 @@
 </head>
 <body onload="showSection('projects')">
     <header>
-        <h1>Andres Lazaris</h1>
+        <h1>Andres Lazaris, PMP, PMI-ACP</h1>
         <p>Accomplished Project & Program Manager in Technology and Finance</p>
+        <div class="contact-info">
+            <img src="images/selfie.png" alt="Andres Lazaris">
+            <p>Andres.Lazaris@gmail.com | (703) 509-2433 | <a href="https://www.linkedin.com/in/andreslazaris">LinkedIn</a></p>
+        </div>
     </header>
     <nav>
         <a href="javascript:void(0)" onclick="showSection('projects')">Projects</a>
@@ -135,11 +132,6 @@
     </nav>
     <div class="container">
         <div id="projects" class="content-section active">
-            <div class="profile">
-                <img src="images/selfie.png" alt="Andres Lazaris">
-                <h1>Andres Lazaris, PMP, PMI-ACP</h1>
-                <p>Andres.Lazaris@gmail.com | (703) 509-2433 | <a href="https://www.linkedin.com/in/andreslazaris">LinkedIn</a></p>
-            </div>
             <div class="project">
                 <h2>Financial Business Operations at Twilio</h2>
                 <p><strong>Role:</strong> Project Manager, Financial Business Operations</p>
@@ -179,7 +171,7 @@
                 </ul>
             </div>
             <div class="project">
-                <h2>Portfolio Implementation Operations at Sands Capital Management</h2>
+                <h2>Trading Operations at Sands Capital Management</h2>
                 <p><strong>Role:</strong> Senior Associate</p>
                 <p><strong>Duration:</strong> 2015 - 2019</p>
                 <ul>
@@ -203,4 +195,7 @@
         </div>
     </div>
     <footer>
-        <p>© 2024 Andres Lazaris. All
+        <p>© 2024 Andres Lazaris. All rights reserved.</p>
+    </footer>
+</body>
+</html>
