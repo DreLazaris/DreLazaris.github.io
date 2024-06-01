@@ -70,7 +70,7 @@
             padding: 20px;
             flex: 1;
         }
-        .project, .certifications {
+        .project, .certifications, .blog {
             background-color: #282c34;
             padding: 1.5rem;
             margin: 1rem 0;
@@ -78,22 +78,22 @@
             transition: transform 0.3s ease;
             border-radius: 8px;
         }
-        .project:hover, .certifications:hover {
+        .project:hover, .certifications:hover, .blog:hover {
             transform: translateY(-5px);
         }
-        .project h2, .certifications h2 {
+        .project h2, .certifications h2, .blog h2 {
             color: #eaeaea;
             margin-bottom: 10px;
         }
-        .project p, .certifications p {
+        .project p, .certifications p, .blog p {
             color: #c7c7c7;
             font-size: 1.1em;
         }
-        .project ul, .certifications ul {
+        .project ul, .certifications ul, .blog ul {
             color: #c7c7c7;
             padding-left: 20px;
         }
-        .project ul li, .certifications ul li {
+        .project ul li, .certifications ul li, .blog ul li {
             margin-bottom: 10px;
         }
         footer {
@@ -121,7 +121,7 @@
         }
     </script>
 </head>
-<body onload="showSection('projects')">
+<body onload="showSection('blog')">
     <header>
         <h1>Andres Lazaris, PMP, PMI-ACP</h1>
         <p>Accomplished Project & Program Manager in Technology and Finance</p>
@@ -131,10 +131,11 @@
         </div>
     </header>
     <nav>
-        <a href="javascript:void(0)" onclick="showSection('projects')">Projects</a>
+        <a href="javascript:void(0)" onclick="showSection('blog')" class="active">Blog</a>
+        <a href="javascript:void(0)" onclick="showSection('resume')">Resume</a>
         <a href="javascript:void(0)" onclick="showSection('certifications')">Certifications</a>
     </nav>
-        <div class="container">
+    <div class="container">
         <div id="blog" class="content-section active">
             <div class="blog">
                 <h2>Blog</h2>
@@ -182,13 +183,13 @@
                 </ul>
             </div>
             <div class="project">
-                <h2>Portfolio Implementation Operations at Sands Capital Management</h2>
+                <h2>Trading Operations at Sands Capital Management</h2>
                 <p><strong>Role:</strong> Senior Associate</p>
                 <p><strong>Duration:</strong> 2015 - 2019</p>
                 <ul>
                     <li>Integrated four new strategies and products in 2018.</li>
                     <li>Integrated three new complex, multi-asset investment products in 2019, contributing to the firm's growth and investment diversification.</li>
-                    <li>Led initiatives to enhance trading efficiency and reduce operational risk.</li>
+                    <li>Led initiatives to enhance trading efficiency and reduce operational risk
                     <li>Collaborated with portfolio managers to develop and implement trading strategies.</li>
                     <li>Monitored market trends and provided insights to support investment decisions.</li>
                 </ul>
